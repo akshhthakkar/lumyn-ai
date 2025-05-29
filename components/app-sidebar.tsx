@@ -30,9 +30,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     <User className="size-4 text-sidebar-primary-foreground" />
                   </div>
                 </div>
-                <span className="text-xs text-muted-foreground">
-                  Check out my portfolio!
-                </span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
