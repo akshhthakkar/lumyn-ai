@@ -1,5 +1,6 @@
 import * as React from "react"
 import Link from "next/link"
+import { User } from "lucide-react"
 import {
   Sidebar,
   SidebarContent,
@@ -19,14 +20,19 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
-              <Link href="https://akshhthakkar.github.io/" target="_blank">
-                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <span className="font-bold text-sm">A</span>
+              <Link href="https://akshhthakkar.github.io/" target="_blank" className="flex flex-col gap-1">
+                <div className="flex items-center gap-2">
+                  <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+                    <span className="font-bold text-sm">A</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <span className="font-semibold">Aksh Thakkar</span>
+                    <User className="size-4 text-sidebar-primary-foreground" />
+                  </div>
                 </div>
-                <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-semibold">Aksh Thakkar</span>
-                  <span className="text-xs text-muted-foreground">Portfolio</span>
-                </div>
+                <span className="text-xs text-muted-foreground">
+                  Check out my portfolio!
+                </span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -39,9 +45,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
       <SidebarRail />
 
-      <SidebarFooter>
-        {/* No footer menu now */}
-      </SidebarFooter>
+      <SidebarFooter>{/* No footer menu now */}</SidebarFooter>
     </Sidebar>
   )
 }
